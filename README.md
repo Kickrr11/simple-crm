@@ -4,7 +4,7 @@ The API handles a simple customer relationship system
 
 - [Simple Crm](#simple-crm)
     - [Install](#install)
-    - [Usage](#API EndPoints)
+    - [API EndPoints](#API EndPoints)
         - [Login](#Login)
         - [Accounts](#Accounts)
         - [Contacts](#Contacts)
@@ -32,7 +32,7 @@ After generating, run `migrate --seed` Artisan command.
 php artisan:migrate --seed
 ```
 
-After generating, run `passport:install` Artisan command.
+After migrating, run `passport:install` Artisan command.
 
 ``` bash
 php artisan:passport:install
