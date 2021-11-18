@@ -4,7 +4,7 @@ The API handles a simple customer relationship system
 
 - [Simple Crm](#simple-crm)
     - [Install](#install)
-    - [API EndPoints](#API EndPoints)
+    - [API EndPoints](#api-endpoints)
         - [Login](#Login)
         - [Accounts](#Accounts)
         - [Contacts](#Contacts)
@@ -82,12 +82,12 @@ For Testing, run `./vendor/bin/phpunit`  command.
 * GET All `api/v1/contacts`
 * GET Single `api/v1/contacts/{contact_id}`
 * POST Create `api/v1/contacts`
-* PUT Update `api/v1/contacts/{account_id}`
-* DELETE Delete `api/v1/contacts/{account_id}`
+* PUT Update `api/v1/contacts/{contact_id}`
+* DELETE Delete `api/v1/contacts/{contact_id}`
 
 ##### Notes
 * GET All `api/v1/notes`
-* GET Single `api/v1/notes/{contact_id}`
+* GET Single `api/v1/notes/{note_id}`
 * POST Create `api/v1/notes`
-* PUT Update `api/v1/notes/{account_id}`
-* DELETE Delete `api/v1/notes/{account_id}`
+* PUT Update `api/v1/notes/{note_id}`
+* DELETE Delete `api/v1/notes/{note_id}`
