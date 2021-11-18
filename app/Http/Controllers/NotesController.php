@@ -64,7 +64,6 @@ class NotesController extends Controller
             return ResponseBuilder::success(["note" => $note], 201, [], 201);
         } catch (Throwable $throwable) {
             DB::rollBack();
-            dd($throwable->getMessage());
             return ResponseBuilder::error($throwable->getCode(), ["notes" => $throwable->getMessage()], $throwable->getMessage(), $throwable->getCode());
         }
     }

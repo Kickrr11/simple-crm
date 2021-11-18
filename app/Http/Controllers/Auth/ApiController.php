@@ -49,7 +49,7 @@ class ApiController extends Controller
                     'access_token' => $token->accessToken,
                     'token_type' => 'Bearer',
                     'expires_at' => Carbon::parse(
-                    $token->token->expires_at
+                        $token->token->expires_at
                     )->toDateTimeString()
                 ], 200);
         } catch (\Throwable $throwable) {
