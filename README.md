@@ -49,11 +49,11 @@ For Testing, run `./vendor/bin/phpunit`  command.
 ``` bash
 ./vendor/bin/phpunit
 ```
-    `
+
 ##### Documentation
 - Visit the following endpoint for detailed documentation visit:
  <code>
-    base_url/docs
+    your_base_url/docs
 </code>
 
 
