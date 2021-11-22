@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "code": 200,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "account": {
+            "id": 1,
+            "name": "Schiller Inc",
+            "user_id": "1",
+            "description": "Voluptate modi facere adipisci maxime quo. Facere a ut sed aperiam. Minus deserunt ab dolor iusto qui vero praesentium. Consequatur ut consequatur optio magni odio deleniti.",
+            "address": "3386 Tevin Shores Apt. 749\nDouglasborough, VT 51354-9497",
+            "city": "South Laruefurt",
+            "postal_code": "98006",
+            "country_code": "KE",
+            "is_active": "1",
+            "created_at": "2021-11-22T14:13:35.000000Z",
+            "updated_at": "2021-11-22T14:13:35.000000Z",
+            "contacts": []
+        }
+    }
+}

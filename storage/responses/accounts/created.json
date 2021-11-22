@@ -1,0 +1,21 @@
+{
+    "success": true,
+    "code": 201,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "account": {
+            "name": "Stoltenberg, Ratke and Wyman",
+            "description": "Laudantium impedit cupiditate est. Earum ratione dolorem delectus totam. Iusto repellendus dolor atque delectus dolorum sunt at.",
+            "address": "35596 Lila Prairie\nPort Chauncey, LA 80430-0752",
+            "postal_code": "54129",
+            "city": "Skileshaven",
+            "is_active": 1,
+            "country_code": "GG",
+            "user_id": 1,
+            "updated_at": "2021-11-22T14:11:05.000000Z",
+            "created_at": "2021-11-22T14:11:05.000000Z",
+            "id": 1
+        }
+    }
+}

@@ -1,0 +1,576 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "test-project.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "85c0ca9f-186e-4435-84fd-837222ae7002",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Accounts create.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/accounts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/accounts"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"n\",\"description\":\"ri\",\"address\":\"\",\"postal_code\":\"xd\",\"city\":\"\",\"is_active\":\"at\",\"user_id\":4}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n    \"success\": true,\n    \"code\": 201,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"account\": {\n            \"name\": \"Stoltenberg, Ratke and Wyman\",\n            \"description\": \"Laudantium impedit cupiditate est. Earum ratione dolorem delectus totam. Iusto repellendus dolor atque delectus dolorum sunt at.\",\n            \"address\": \"35596 Lila Prairie\\nPort Chauncey, LA 80430-0752\",\n            \"postal_code\": \"54129\",\n            \"city\": \"Skileshaven\",\n            \"is_active\": 1,\n            \"country_code\": \"GG\",\n            \"user_id\": 1,\n            \"updated_at\": \"2021-11-22T14:11:05.000000Z\",\n            \"created_at\": \"2021-11-22T14:11:05.000000Z\",\n            \"id\": 1\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Account shows single .",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/accounts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/accounts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the account."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"account\": {\n            \"id\": 1,\n            \"name\": \"Corwin Ltd\",\n            \"user_id\": \"1\",\n            \"description\": \"Molestias deserunt sed tenetur nostrum neque sed blanditiis. Quod consequatur quibusdam aut. Dolore quia vitae cum quae quisquam quia. Fuga rerum unde ipsa.\",\n            \"address\": \"24764 Walter Brooks\\nLake Gracie, OK 50893\",\n            \"city\": \"Schaeferton\",\n            \"postal_code\": \"38625-7681\",\n            \"country_code\": \"WS\",\n            \"is_active\": \"1\",\n            \"created_at\": \"2021-11-22T14:28:29.000000Z\",\n            \"updated_at\": \"2021-11-22T14:28:29.000000Z\",\n            \"contacts\": []\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Account updates an existing .",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/accounts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/accounts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the account."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dd\",\"description\":\"o\",\"address\":\"rf\",\"postal_code\":\"\",\"city\":\"jm\",\"is_active\":\"magnam\",\"user_id\":11}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"account\": {\n            \"id\": 1,\n            \"name\": \"Schiller Inc\",\n            \"user_id\": \"1\",\n            \"description\": \"Voluptate modi facere adipisci maxime quo. Facere a ut sed aperiam. Minus deserunt ab dolor iusto qui vero praesentium. Consequatur ut consequatur optio magni odio deleniti.\",\n            \"address\": \"3386 Tevin Shores Apt. 749\\nDouglasborough, VT 51354-9497\",\n            \"city\": \"South Laruefurt\",\n            \"postal_code\": \"98006\",\n            \"country_code\": \"KE\",\n            \"is_active\": \"1\",\n            \"created_at\": \"2021-11-22T14:13:35.000000Z\",\n            \"updated_at\": \"2021-11-22T14:13:35.000000Z\",\n            \"contacts\": []\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Account deletes an existing.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/accounts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/accounts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "The ID of the account."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"value\": \"Account successfully deleted\"\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Stores newly created contact.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"lg\",\"last_name\":\"\",\"job_title\":\"\",\"account_id\":3,\"postal_code\":\"w\",\"city\":\"\",\"address\":\"q\",\"email\":\"ryan.braden@example.net\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Shows single contact.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "15",
+                                    "description": "The ID of the contact."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Updates an existing contact.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the contact."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"on\",\"last_name\":\"\",\"job_title\":\"k\",\"account_id\":17,\"postal_code\":\"\",\"city\":\"nq\",\"address\":\"k\",\"email\":\"qvonrueden@example.net\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletes an existing contact.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the contact."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Returns all notes.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notes",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Accounts return all.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/accounts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/accounts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"accounts\": {\n            \"current_page\": 1,\n            \"data\": [],\n            \"first_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/accounts?page=1\",\n            \"from\": null,\n            \"last_page\": 1,\n            \"last_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/accounts?page=1\",\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"\\u0026laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http:\\\/\\\/example.test\\\/api\\\/accounts?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"Next \\u0026raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"next_page_url\": null,\n            \"path\": \"http:\\\/\\\/example.test\\\/api\\\/accounts\",\n            \"per_page\": 10,\n            \"prev_page_url\": null,\n            \"to\": null,\n            \"total\": 0\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Returns all contacts.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Creates a new note.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notes",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notes"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"body\":\"\",\"noteable_type\":\"consequuntur\",\"noteable_id\":15}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"sbartoletti@example.net\",\"password\":\"aut\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"joesph.pouros@example.org\",\"password\":\"dolore\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer"
+    }
+}

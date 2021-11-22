@@ -151,6 +151,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/data-transfer-object" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/knuckleswtf/scribe" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/shalvah/clara" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/shalvah/upgrader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/erusev/parsedown" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mpociot/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-exporter" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -41,11 +41,13 @@ class AccountsController extends Controller
     ){}
 
     /**
-     * Returns all accounts.
-     *
+     * Accounts return all.
+     * @responseFile storage/responses/accounts/get.json
      * @return Response
      * @throws Exception
+     *
      */
+
     public function index(): Response
     {
         try {
@@ -57,7 +59,8 @@ class AccountsController extends Controller
     }
 
     /**
-     * Stores newly created account.
+     * Accounts create.
+     * @responseFile status=201 storage/responses/accounts/created.json
      * @param StoreAccountRequest $accountRequest
      * @return Response
      * @throws Exception|Throwable
@@ -76,7 +79,8 @@ class AccountsController extends Controller
     }
 
     /**
-     * Shows single account.
+     * Account shows single .
+     * @responseFile storage/responses/accounts/show_single.json
      * @param int $id
      * @return Response
      * @throws Exception
@@ -93,7 +97,8 @@ class AccountsController extends Controller
     }
 
     /**
-     * Updates an existing account.
+     * Account updates an existing .
+     * @responseFile storage/responses/accounts/updated.json
      * @param StoreAccountRequest $accountRequest
      * @param $id
      * @return Response
@@ -120,7 +125,8 @@ class AccountsController extends Controller
     }
 
     /**
-     * Deletes an existing account.
+     *  Account deletes an existing.
+     * @responseFile storage/responses/accounts/deleted.json
      * @param $id
      * @return Response
      * @throws Exception|Throwable

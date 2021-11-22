@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -25,24 +26,26 @@ class ApiController extends Controller
 
     /**
      *
-     * @param Request $request
+     * @param LoginRequest $loginRequest
      *
      * @throw /Exception
-     *
+     * @response {
+     * "data": {
+     *  "access_token": "eyJ0eXA...",
+     *  "token_type": "Bearer",
+     *   "expires_at": "2022-..."
+     * }
+     * @unauthenticated
      */
 
-    public function login(Request $request): Response
+    public function login(LoginRequest $loginRequest): Response
     {
         try {
-            $request->validate([
-                'email' => 'required|string|email',
-                'password' => 'required|string',
-            ]);
             $credentials = request(['email', 'password']);
             if (!Auth::attempt($credentials)) {
                 throw new \Exception('Unauthorized', 401);
             }
-            $user = User::where("email", $request->email)->first();
+            $user = User::where("email", $loginRequest->email)->first();
             $token = $user->createToken('Personal Access Token');
             return ResponseBuilder::success(
                 [

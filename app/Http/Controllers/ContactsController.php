@@ -38,8 +38,7 @@ class ContactsController extends Controller
     public function __construct(private CrudInterface $crudService){}
 
     /**
-     * Returns all accounts.
-     *
+     * Returns all contacts.
      * @return Response
      * @throws Throwable
      */

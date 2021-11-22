@@ -1,0 +1,938 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://test-project.test'
+paths:
+  /api/accounts:
+    post:
+      summary: 'Accounts create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  code: 201
+                  locale: en
+                  message: OK
+                  data:
+                    account:
+                      name: 'Stoltenberg, Ratke and Wyman'
+                      description: 'Laudantium impedit cupiditate est. Earum ratione dolorem delectus totam. Iusto repellendus dolor atque delectus dolorum sunt at.'
+                      address: "35596 Lila Prairie\nPort Chauncey, LA 80430-0752"
+                      postal_code: '54129'
+                      city: Skileshaven
+                      is_active: 1
+                      country_code: GG
+                      user_id: 1
+                      updated_at: '2021-11-22T14:11:05.000000Z'
+                      created_at: '2021-11-22T14:11:05.000000Z'
+                      id: 1
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 201
+                  locale:
+                    type: string
+                    example: en
+                  message:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    example:
+                      account:
+                        name: 'Stoltenberg, Ratke and Wyman'
+                        description: 'Laudantium impedit cupiditate est. Earum ratione dolorem delectus totam. Iusto repellendus dolor atque delectus dolorum sunt at.'
+                        address: "35596 Lila Prairie\nPort Chauncey, LA 80430-0752"
+                        postal_code: '54129'
+                        city: Skileshaven
+                        is_active: 1
+                        country_code: GG
+                        user_id: 1
+                        updated_at: '2021-11-22T14:11:05.000000Z'
+                        created_at: '2021-11-22T14:11:05.000000Z'
+                        id: 1
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: 'n'
+                description:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ri
+                address:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                postal_code:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: xd
+                city:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                is_active:
+                  type: string
+                  description: ''
+                  example: at
+                country_code:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 4
+              required:
+                - name
+                - is_active
+                - user_id
+    get:
+      summary: 'Accounts return all.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  code: 200
+                  locale: en
+                  message: OK
+                  data:
+                    accounts:
+                      current_page: 1
+                      data: []
+                      first_page_url: 'http://example.test/api/accounts?page=1'
+                      from: null
+                      last_page: 1
+                      last_page_url: 'http://example.test/api/accounts?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://example.test/api/accounts?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://example.test/api/accounts'
+                      per_page: 10
+                      prev_page_url: null
+                      to: null
+                      total: 0
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  locale:
+                    type: string
+                    example: en
+                  message:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    example:
+                      accounts:
+                        current_page: 1
+                        data: []
+                        first_page_url: 'http://example.test/api/accounts?page=1'
+                        from: null
+                        last_page: 1
+                        last_page_url: 'http://example.test/api/accounts?page=1'
+                        links:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://example.test/api/accounts?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        next_page_url: null
+                        path: 'http://example.test/api/accounts'
+                        per_page: 10
+                        prev_page_url: null
+                        to: null
+                        total: 0
+      tags:
+        - Endpoints
+  '/api/accounts/{id}':
+    get:
+      summary: 'Account shows single .'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  code: 200
+                  locale: en
+                  message: OK
+                  data:
+                    account:
+                      id: 1
+                      name: 'Corwin Ltd'
+                      user_id: '1'
+                      description: 'Molestias deserunt sed tenetur nostrum neque sed blanditiis. Quod consequatur quibusdam aut. Dolore quia vitae cum quae quisquam quia. Fuga rerum unde ipsa.'
+                      address: "24764 Walter Brooks\nLake Gracie, OK 50893"
+                      city: Schaeferton
+                      postal_code: 38625-7681
+                      country_code: WS
+                      is_active: '1'
+                      created_at: '2021-11-22T14:28:29.000000Z'
+                      updated_at: '2021-11-22T14:28:29.000000Z'
+                      contacts: []
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  locale:
+                    type: string
+                    example: en
+                  message:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    example:
+                      account:
+                        id: 1
+                        name: 'Corwin Ltd'
+                        user_id: '1'
+                        description: 'Molestias deserunt sed tenetur nostrum neque sed blanditiis. Quod consequatur quibusdam aut. Dolore quia vitae cum quae quisquam quia. Fuga rerum unde ipsa.'
+                        address: "24764 Walter Brooks\nLake Gracie, OK 50893"
+                        city: Schaeferton
+                        postal_code: 38625-7681
+                        country_code: WS
+                        is_active: '1'
+                        created_at: '2021-11-22T14:28:29.000000Z'
+                        updated_at: '2021-11-22T14:28:29.000000Z'
+                        contacts: []
+      tags:
+        - Endpoints
+    put:
+      summary: 'Account updates an existing .'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  code: 200
+                  locale: en
+                  message: OK
+                  data:
+                    account:
+                      id: 1
+                      name: 'Schiller Inc'
+                      user_id: '1'
+                      description: 'Voluptate modi facere adipisci maxime quo. Facere a ut sed aperiam. Minus deserunt ab dolor iusto qui vero praesentium. Consequatur ut consequatur optio magni odio deleniti.'
+                      address: "3386 Tevin Shores Apt. 749\nDouglasborough, VT 51354-9497"
+                      city: 'South Laruefurt'
+                      postal_code: '98006'
+                      country_code: KE
+                      is_active: '1'
+                      created_at: '2021-11-22T14:13:35.000000Z'
+                      updated_at: '2021-11-22T14:13:35.000000Z'
+                      contacts: []
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  locale:
+                    type: string
+                    example: en
+                  message:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    example:
+                      account:
+                        id: 1
+                        name: 'Schiller Inc'
+                        user_id: '1'
+                        description: 'Voluptate modi facere adipisci maxime quo. Facere a ut sed aperiam. Minus deserunt ab dolor iusto qui vero praesentium. Consequatur ut consequatur optio magni odio deleniti.'
+                        address: "3386 Tevin Shores Apt. 749\nDouglasborough, VT 51354-9497"
+                        city: 'South Laruefurt'
+                        postal_code: '98006'
+                        country_code: KE
+                        is_active: '1'
+                        created_at: '2021-11-22T14:13:35.000000Z'
+                        updated_at: '2021-11-22T14:13:35.000000Z'
+                        contacts: []
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: dd
+                description:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: o
+                address:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: rf
+                postal_code:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                city:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: jm
+                is_active:
+                  type: string
+                  description: ''
+                  example: magnam
+                country_code:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 11
+              required:
+                - name
+                - is_active
+                - user_id
+    delete:
+      summary: 'Account deletes an existing.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  code: 200
+                  locale: en
+                  message: OK
+                  data:
+                    value: 'Account successfully deleted'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  locale:
+                    type: string
+                    example: en
+                  message:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    example:
+                      value: 'Account successfully deleted'
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the account.'
+        example: 10
+        required: true
+        schema:
+          type: integer
+  /api/contacts:
+    post:
+      summary: 'Stores newly created contact.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: lg
+                last_name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                job_title:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                account_id:
+                  type: integer
+                  description: ''
+                  example: 3
+                postal_code:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: w
+                city:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                address:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: q
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ryan.braden@example.net
+                country_code:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - account_id
+    get:
+      summary: 'Returns all contacts.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+  '/api/contacts/{id}':
+    get:
+      summary: 'Shows single contact.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    put:
+      summary: 'Updates an existing contact.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: 'on'
+                last_name:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                job_title:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: k
+                account_id:
+                  type: integer
+                  description: ''
+                  example: 17
+                postal_code:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                city:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: nq
+                address:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: k
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: qvonrueden@example.net
+                country_code:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - account_id
+    delete:
+      summary: 'Deletes an existing contact.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the contact.'
+        example: 15
+        required: true
+        schema:
+          type: integer
+  /api/notes:
+    get:
+      summary: 'Returns all notes.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    post:
+      summary: 'Creates a new note.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: 'Must be at least 2 characters.'
+                  example: ''
+                noteable_type:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                noteable_id:
+                  type: integer
+                  description: ''
+                  example: 15
+              required:
+                - body
+                - noteable_type
+                - noteable_id
+  /api/login:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}"
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: joesph.pouros@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: dolore
+              required:
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

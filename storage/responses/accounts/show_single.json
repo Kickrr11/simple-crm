@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "code": 200,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "account": {
+            "id": 1,
+            "name": "Corwin Ltd",
+            "user_id": "1",
+            "description": "Molestias deserunt sed tenetur nostrum neque sed blanditiis. Quod consequatur quibusdam aut. Dolore quia vitae cum quae quisquam quia. Fuga rerum unde ipsa.",
+            "address": "24764 Walter Brooks\nLake Gracie, OK 50893",
+            "city": "Schaeferton",
+            "postal_code": "38625-7681",
+            "country_code": "WS",
+            "is_active": "1",
+            "created_at": "2021-11-22T14:28:29.000000Z",
+            "updated_at": "2021-11-22T14:28:29.000000Z",
+            "contacts": []
+        }
+    }
+}
