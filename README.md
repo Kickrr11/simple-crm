@@ -4,11 +4,6 @@ The API handles a simple customer relationship system
 
 - [Simple Crm](#simple-crm)
     - [Install](#install)
-    - [API EndPoints](#api-endpoints)
-        - [Login](#Login)
-        - [Accounts](#Accounts)
-        - [Contacts](#Contacts)
-        - [Notes](#Notes)
 
 ## Install
 
