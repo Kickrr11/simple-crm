@@ -38,56 +38,22 @@ After migrating, run `passport:install` Artisan command.
 php artisan:passport:install
 ```
 
+Run `scribe:generate` Artisan command for detailed documentation.
+
+``` bash
+php artisan scribe:generate
+```
+
 For Testing, run `./vendor/bin/phpunit`  command.
 
 ``` bash
 ./vendor/bin/phpunit
 ```
-
-### API EndPoints
-##### Login
-* Post `/api/v1/login`
-  - use the login details in `database\seeders\UserSeeder.php`
-  - Example response:  
-    <code>
-    {
-    
-        "success": true,
-        "code": 200,
-        "locale": "en",
-        "message": "OK",
-        "data": {
-        "access_token": "the access token",
-        "token_type": "Bearer",
-        "expires_at": "2022-11-17 14:20:46"
-        }
-    }
-    </code>
-  - The following headers must be included on each request:
-    
     `
-    Content-type: multipart/form-data
-    Accept: application/json
-    Authorization: Bearer TOKEN
-    `
+##### Documentation
+- Visit the following endpoint for detailed documentation visit:
+ <code>
+    base_url/docs
+</code>
 
-##### Accounts
-* GET All `api/v1/accounts`
-* GET Single `api/v1/accounts/{account_id}`  
-* POST Create `api/v1/accounts`
-* PUT Update `api/v1/accounts/{account_id}`
-* DELETE Delete `api/v1/accounts/{account_id}`
 
-##### Contacts
-* GET All `api/v1/contacts`
-* GET Single `api/v1/contacts/{contact_id}`
-* POST Create `api/v1/contacts`
-* PUT Update `api/v1/contacts/{contact_id}`
-* DELETE Delete `api/v1/contacts/{contact_id}`
-
-##### Notes
-* GET All `api/v1/notes`
-* GET Single `api/v1/notes/{note_id}`
-* POST Create `api/v1/notes`
-* PUT Update `api/v1/notes/{note_id}`
-* DELETE Delete `api/v1/notes/{note_id}`

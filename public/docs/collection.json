@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "85c0ca9f-186e-4435-84fd-837222ae7002",
+        "_postman_id": "c7803415-8edd-47a1-bb13-a286698ad3e8",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"n\",\"description\":\"ri\",\"address\":\"\",\"postal_code\":\"xd\",\"city\":\"\",\"is_active\":\"at\",\"user_id\":4}"
+                            "raw": "{\"name\":\"dd\",\"description\":\"\",\"address\":\"v\",\"postal_code\":\"r\",\"city\":\"r\",\"is_active\":\"in\",\"user_id\":7}"
                         },
                         "description": ""
                     },
@@ -56,7 +56,7 @@
                     ]
                 },
                 {
-                    "name": "Account shows single .",
+                    "name": "Accounts shows single .",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -68,7 +68,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "1",
                                     "description": "The ID of the account."
                                 }
                             ]
@@ -97,7 +97,7 @@
                     ]
                 },
                 {
-                    "name": "Account updates an existing .",
+                    "name": "Accounts updates an existing .",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -109,7 +109,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "5",
                                     "description": "The ID of the account."
                                 }
                             ]
@@ -127,7 +127,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"dd\",\"description\":\"o\",\"address\":\"rf\",\"postal_code\":\"\",\"city\":\"jm\",\"is_active\":\"magnam\",\"user_id\":11}"
+                            "raw": "{\"name\":\"\",\"description\":\"\",\"address\":\"j\",\"postal_code\":\"\",\"city\":\"qj\",\"is_active\":\"asperiores\",\"user_id\":3}"
                         },
                         "description": ""
                     },
@@ -141,7 +141,7 @@
                     ]
                 },
                 {
-                    "name": "Account deletes an existing.",
+                    "name": "Accounts deletes an existing.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -153,7 +153,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "16",
                                     "description": "The ID of the account."
                                 }
                             ]
@@ -182,36 +182,7 @@
                     ]
                 },
                 {
-                    "name": "Stores newly created contact.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/contacts",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"first_name\":\"lg\",\"last_name\":\"\",\"job_title\":\"\",\"account_id\":3,\"postal_code\":\"w\",\"city\":\"\",\"address\":\"q\",\"email\":\"ryan.braden@example.net\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Shows single contact.",
+                    "name": "Contact Shows single .",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -223,7 +194,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "15",
+                                    "value": "17",
                                     "description": "The ID of the contact."
                                 }
                             ]
@@ -244,28 +215,15 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"contact\": {\n            \"id\": 1,\n            \"account_id\": \"1\",\n            \"first_name\": \"Talon\",\n            \"last_name\": \"Bahringer\",\n            \"job_title\": \"Plating Machine Operator\",\n            \"address\": \"94628 Craig Shoals\\nHarveyfort, RI 01412-6293\",\n            \"city\": \"Abbyhaven\",\n            \"postal_code\": \"82793-5888\",\n            \"country_code\": \"HK\",\n            \"email\": \"isaiah.bogisich@gmail.com\",\n            \"phone\": \"+1-351-936-2170\",\n            \"created_at\": \"2021-11-22T20:42:08.000000Z\",\n            \"updated_at\": \"2021-11-22T20:42:08.000000Z\",\n            \"account\": {\n                \"id\": 1,\n                \"name\": \"Parisian PLC\",\n                \"user_id\": \"1\",\n                \"description\": \"Minima quia quod natus. Enim aspernatur in iure doloribus distinctio aut fuga. Iste est distinctio recusandae enim molestias saepe. Sed omnis eligendi sunt.\",\n                \"address\": \"618 Gulgowski Squares\\nSouth Christophe, CA 47461\",\n                \"city\": \"South Dakota\",\n                \"postal_code\": \"62172-5816\",\n                \"country_code\": \"RS\",\n                \"is_active\": \"1\",\n                \"created_at\": \"2021-11-22T20:42:08.000000Z\",\n                \"updated_at\": \"2021-11-22T20:42:08.000000Z\"\n            }\n        }\n    }\n}\n",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Updates an existing contact.",
+                    "name": "Contact Updates an existing.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -277,7 +235,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "3",
                                     "description": "The ID of the contact."
                                 }
                             ]
@@ -295,14 +253,21 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"on\",\"last_name\":\"\",\"job_title\":\"k\",\"account_id\":17,\"postal_code\":\"\",\"city\":\"nq\",\"address\":\"k\",\"email\":\"qvonrueden@example.net\"}"
+                            "raw": "{\"first_name\":\"gd\",\"last_name\":\"e\",\"job_title\":\"\",\"account_id\":19,\"postal_code\":\"ki\",\"city\":\"cp\",\"address\":\"i\",\"email\":\"kshlerin.gustave@example.net\"}"
                         },
                         "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"contact\": {\n            \"id\": 1,\n            \"account_id\": 1,\n            \"first_name\": \"Juvenal\",\n            \"last_name\": \"Yost\",\n            \"job_title\": \"Transformer Repairer\",\n            \"address\": \"2615 Kaley Lodge\\nEast Alfonsotown, CT 70458-6001\",\n            \"city\": \"Haagport\",\n            \"postal_code\": \"14234\",\n            \"country_code\": \"FO\",\n            \"email\": \"newton43@keeling.com\",\n            \"phone\": \"+1-541-245-6893\",\n            \"created_at\": \"2021-11-22T20:42:42.000000Z\",\n            \"updated_at\": \"2021-11-22T20:42:42.000000Z\"\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "Deletes an existing contact.",
+                    "name": "Contact Deletes an existing.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -314,7 +279,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "3",
                                     "description": "The ID of the contact."
                                 }
                             ]
@@ -333,10 +298,17 @@
                         "body": null,
                         "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"value\": \"Contact successfully deleted\"\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "Returns all notes.",
+                    "name": "Notes returns all .",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -361,22 +333,42 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"notes\": {\n            \"current_page\": 1,\n            \"data\": [],\n            \"first_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/notes?page=1\",\n            \"from\": null,\n            \"last_page\": 1,\n            \"last_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/notes?page=1\",\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"\\u0026laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http:\\\/\\\/example.test\\\/api\\\/notes?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"Next \\u0026raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"next_page_url\": null,\n            \"path\": \"http:\\\/\\\/example.test\\\/api\\\/notes\",\n            \"per_page\": 10,\n            \"prev_page_url\": null,\n            \"to\": null,\n            \"total\": 0\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Contacts Returns all.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"contacts\": {\n            \"current_page\": 1,\n            \"data\": [],\n            \"first_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/contacts?page=1\",\n            \"from\": null,\n            \"last_page\": 1,\n            \"last_page_url\": \"http:\\\/\\\/example.test\\\/api\\\/contacts?page=1\",\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"\\u0026laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http:\\\/\\\/example.test\\\/api\\\/contacts?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"Next \\u0026raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"next_page_url\": null,\n            \"path\": \"http:\\\/\\\/example.test\\\/api\\\/contacts\",\n            \"per_page\": 10,\n            \"prev_page_url\": null,\n            \"to\": null,\n            \"total\": 0\n        }\n    }\n}\n",
                             "name": ""
                         }
                     ]
@@ -415,16 +407,16 @@
                     ]
                 },
                 {
-                    "name": "Returns all contacts.",
+                    "name": "Login - Generates a jwt token",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/contacts",
+                            "path": "api\/login",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -435,33 +427,62 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": ""
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"qmoen@example.com\",\"password\":\"repellendus\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Creates a new note.",
+                    "name": "Contacts Stores newly created.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contacts",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/contacts"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"n\",\"last_name\":\"ny\",\"job_title\":\"af\",\"account_id\":10,\"postal_code\":\"wm\",\"city\":\"t\",\"address\":\"\",\"email\":\"xgreenfelder@example.org\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"success\": true,\n    \"code\": 201,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"contact\": {\n            \"id\": 1,\n            \"first_name\": \"Adelia\",\n            \"last_name\": \"Legros\",\n            \"account_id\": 1,\n            \"postal_code\": \"43201-4839\",\n            \"city\": \"Kiehnfurt\",\n            \"address\": \"4288 Amalia Pine Suite 107\\nAndreannemouth, KS 14490-1489\",\n            \"email\": \"pfeffer.angus@cassin.com\",\n            \"country_code\": \"VI\",\n            \"updated_at\": \"2021-11-22T20:40:56.000000Z\",\n            \"created_at\": \"2021-11-22T20:40:56.000000Z\"\n        }\n    }\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Note creates a new .",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -483,86 +504,15 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"body\":\"\",\"noteable_type\":\"consequuntur\",\"noteable_id\":15}"
+                            "raw": "{\"body\":\"da\",\"noteable_type\":\"reprehenderit\",\"noteable_id\":7}"
                         },
                         "description": ""
                     },
-                    "response": []
-                },
-                {
-                    "name": "api\/login",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/login",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"sbartoletti@example.net\",\"password\":\"aut\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
                     "response": [
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/login",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/login",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"joesph.pouros@example.org\",\"password\":\"dolore\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\n\"data\": {\n \"access_token\": \"eyJ0eXA...\",\n \"token_type\": \"Bearer\",\n  \"expires_at\": \"2022-...\"\n}",
+                            "body": "{\n    \"success\": true,\n    \"code\": 201,\n    \"locale\": \"en\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"note\": {\n            \"body\": \"Then they both bowed low, and their curls got entangled together. Alice was beginning to grow up any more HERE.\\u0027 \\u0027But then,\\u0027 thought Alice, \\u0027or perhaps they won\\u0027t walk the way I ought to have him.\",\n            \"noteable_id\": 1,\n            \"noteable_type\": \"account\",\n            \"noteable\": {\n                \"id\": 1,\n                \"name\": \"O\\u0027Connell-Hansen\",\n                \"user_id\": \"1\",\n                \"description\": \"Omnis sit voluptas placeat officiis mollitia tenetur voluptatibus accusantium. Quia non vero magnam impedit eos commodi voluptatem. Et esse nihil ut dolore error fugit perspiciatis.\",\n                \"address\": \"888 Reinger Turnpike Suite 784\\nDevonbury, NV 75167\",\n                \"city\": \"East Domingo\",\n                \"postal_code\": \"67072\",\n                \"country_code\": \"AU\",\n                \"is_active\": \"1\",\n                \"created_at\": \"2021-11-22T20:44:53.000000Z\",\n                \"updated_at\": \"2021-11-22T20:44:53.000000Z\"\n            }\n        }\n    }\n}\n",
                             "name": ""
                         }
                     ]

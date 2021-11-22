@@ -75,7 +75,6 @@ class ContactTest extends TestCase
         $user();
         $contact = Contact::factory()->create();
         $response = $this->json("GET", env("APP_URL") . "/api/contacts/$contact->id");
-
         $response->assertStatus(200);
     }
 

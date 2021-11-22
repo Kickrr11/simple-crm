@@ -1,0 +1,36 @@
+{
+    "success": true,
+    "code": 200,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "contact": {
+            "id": 1,
+            "account_id": "1",
+            "first_name": "Talon",
+            "last_name": "Bahringer",
+            "job_title": "Plating Machine Operator",
+            "address": "94628 Craig Shoals\nHarveyfort, RI 01412-6293",
+            "city": "Abbyhaven",
+            "postal_code": "82793-5888",
+            "country_code": "HK",
+            "email": "isaiah.bogisich@gmail.com",
+            "phone": "+1-351-936-2170",
+            "created_at": "2021-11-22T20:42:08.000000Z",
+            "updated_at": "2021-11-22T20:42:08.000000Z",
+            "account": {
+                "id": 1,
+                "name": "Parisian PLC",
+                "user_id": "1",
+                "description": "Minima quia quod natus. Enim aspernatur in iure doloribus distinctio aut fuga. Iste est distinctio recusandae enim molestias saepe. Sed omnis eligendi sunt.",
+                "address": "618 Gulgowski Squares\nSouth Christophe, CA 47461",
+                "city": "South Dakota",
+                "postal_code": "62172-5816",
+                "country_code": "RS",
+                "is_active": "1",
+                "created_at": "2021-11-22T20:42:08.000000Z",
+                "updated_at": "2021-11-22T20:42:08.000000Z"
+            }
+        }
+    }
+}

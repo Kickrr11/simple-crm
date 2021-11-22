@@ -33,10 +33,11 @@ class NotesController extends Controller
     public function __construct(private CrudInterface $crudService){}
 
     /**
-     * Returns all notes.
+     * Notes returns all .
      *
      * @return Response
      * @throws Throwable
+     * @responseFile storage/responses/notes/get.json
      */
 
     public function index(): Response
@@ -49,10 +50,11 @@ class NotesController extends Controller
     }
 
     /**
-     * Creates a new note.
+     * Note creates a new .
      * @param StoreNoteRequest $storeNoteRequest
      * @return Response
      * @throws Throwable
+     * @responseFile storage/responses/notes/created.json
      */
 
     public function store(StoreNoteRequest $storeNoteRequest): Response

@@ -14,6 +14,8 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Auth;
 use MarcinOrlowski\ResponseBuilder\ResponseBuilder;
+use Spatie\RouteAttributes\Attributes\Post;
+use Spatie\RouteAttributes\Attributes\Prefix;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -25,7 +27,7 @@ class ApiController extends Controller
     public function register() {}
 
     /**
-     *
+     * Login - Generates a jwt token
      * @param LoginRequest $loginRequest
      *
      * @throw /Exception
@@ -38,6 +40,7 @@ class ApiController extends Controller
      * @unauthenticated
      */
 
+    #[Post('api/login')]
     public function login(LoginRequest $loginRequest): Response
     {
         try {

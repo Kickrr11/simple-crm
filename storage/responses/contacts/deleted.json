@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "code": 200,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "value": "Contact successfully deleted"
+    }
+}

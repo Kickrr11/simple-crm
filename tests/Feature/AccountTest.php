@@ -90,7 +90,6 @@ class AccountTest extends TestCase
         $user();
         $accountId = Account::factory()->create()->id;
         $response = $this->json("DELETE", env("APP_URL") . "/api/accounts/$accountId");
-        dd($response);
         $response->assertStatus(200);
     }
 }

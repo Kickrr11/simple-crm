@@ -20,37 +20,37 @@ endpoints:
         name: name
         description: 'Must be at least 2 characters.'
         required: true
-        example: 'n'
+        example: dd
         type: string
       description:
         name: description
         description: 'Must be at least 2 characters.'
         required: false
-        example: ri
+        example: ''
         type: string
       address:
         name: address
         description: 'Must be at least 2 characters.'
         required: false
-        example: ''
+        example: v
         type: string
       postal_code:
         name: postal_code
         description: 'Must be at least 2 characters.'
         required: false
-        example: xd
+        example: r
         type: string
       city:
         name: city
         description: 'Must be at least 2 characters.'
         required: false
-        example: ''
+        example: r
         type: string
       is_active:
         name: is_active
         description: ''
         required: true
-        example: at
+        example: in
         type: string
       country_code:
         name: country_code
@@ -62,7 +62,7 @@ endpoints:
         name: user_id
         description: ''
         required: true
-        example: 4
+        example: 7
         type: integer
     responses:
       -
@@ -97,7 +97,7 @@ endpoints:
       - GET
     uri: 'api/accounts/{id}'
     metadata:
-      title: 'Account shows single .'
+      title: 'Accounts shows single .'
       description: ''
       authenticated: true
     headers:
@@ -109,7 +109,7 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: 10
+        example: 1
         type: integer
     queryParameters: []
     bodyParameters: []
@@ -148,7 +148,7 @@ endpoints:
       - PATCH
     uri: 'api/accounts/{id}'
     metadata:
-      title: 'Account updates an existing .'
+      title: 'Accounts updates an existing .'
       description: ''
       authenticated: true
     headers:
@@ -160,7 +160,7 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: 1
+        example: 5
         type: integer
     queryParameters: []
     bodyParameters:
@@ -168,19 +168,19 @@ endpoints:
         name: name
         description: 'Must be at least 2 characters.'
         required: true
-        example: dd
+        example: ''
         type: string
       description:
         name: description
         description: 'Must be at least 2 characters.'
         required: false
-        example: o
+        example: ''
         type: string
       address:
         name: address
         description: 'Must be at least 2 characters.'
         required: false
-        example: rf
+        example: j
         type: string
       postal_code:
         name: postal_code
@@ -192,13 +192,13 @@ endpoints:
         name: city
         description: 'Must be at least 2 characters.'
         required: false
-        example: jm
+        example: qj
         type: string
       is_active:
         name: is_active
         description: ''
         required: true
-        example: magnam
+        example: asperiores
         type: string
       country_code:
         name: country_code
@@ -210,7 +210,7 @@ endpoints:
         name: user_id
         description: ''
         required: true
-        example: 11
+        example: 3
         type: integer
     responses:
       -
@@ -246,7 +246,7 @@ endpoints:
       - DELETE
     uri: 'api/accounts/{id}'
     metadata:
-      title: 'Account deletes an existing.'
+      title: 'Accounts deletes an existing.'
       description: ''
       authenticated: true
     headers:
@@ -258,7 +258,7 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: 17
+        example: 16
         type: integer
     queryParameters: []
     bodyParameters: []
@@ -280,81 +280,10 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - POST
-    uri: api/contacts
-    metadata:
-      title: 'Stores newly created contact.'
-      description: ''
-      authenticated: true
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      first_name:
-        name: first_name
-        description: 'Must be at least 2 characters.'
-        required: true
-        example: lg
-        type: string
-      last_name:
-        name: last_name
-        description: 'Must be at least 2 characters.'
-        required: true
-        example: ''
-        type: string
-      job_title:
-        name: job_title
-        description: 'Must be at least 2 characters.'
-        required: false
-        example: ''
-        type: string
-      account_id:
-        name: account_id
-        description: ''
-        required: true
-        example: 3
-        type: integer
-      postal_code:
-        name: postal_code
-        description: 'Must be at least 2 characters.'
-        required: false
-        example: w
-        type: string
-      city:
-        name: city
-        description: 'Must be at least 2 characters.'
-        required: false
-        example: ''
-        type: string
-      address:
-        name: address
-        description: 'Must be at least 2 characters.'
-        required: false
-        example: q
-        type: string
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: false
-        example: ryan.braden@example.net
-        type: string
-      country_code:
-        name: country_code
-        description: ''
-        required: false
-        example: null
-        type: string
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - GET
     uri: 'api/contacts/{id}'
     metadata:
-      title: 'Shows single contact.'
+      title: 'Contact Shows single .'
       description: ''
       authenticated: true
     headers:
@@ -366,19 +295,52 @@ endpoints:
         name: id
         description: 'The ID of the contact.'
         required: true
-        example: 15
+        example: 17
         type: integer
     queryParameters: []
     bodyParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 200,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "contact": {
+                      "id": 1,
+                      "account_id": "1",
+                      "first_name": "Talon",
+                      "last_name": "Bahringer",
+                      "job_title": "Plating Machine Operator",
+                      "address": "94628 Craig Shoals\nHarveyfort, RI 01412-6293",
+                      "city": "Abbyhaven",
+                      "postal_code": "82793-5888",
+                      "country_code": "HK",
+                      "email": "isaiah.bogisich@gmail.com",
+                      "phone": "+1-351-936-2170",
+                      "created_at": "2021-11-22T20:42:08.000000Z",
+                      "updated_at": "2021-11-22T20:42:08.000000Z",
+                      "account": {
+                          "id": 1,
+                          "name": "Parisian PLC",
+                          "user_id": "1",
+                          "description": "Minima quia quod natus. Enim aspernatur in iure doloribus distinctio aut fuga. Iste est distinctio recusandae enim molestias saepe. Sed omnis eligendi sunt.",
+                          "address": "618 Gulgowski Squares\nSouth Christophe, CA 47461",
+                          "city": "South Dakota",
+                          "postal_code": "62172-5816",
+                          "country_code": "RS",
+                          "is_active": "1",
+                          "created_at": "2021-11-22T20:42:08.000000Z",
+                          "updated_at": "2021-11-22T20:42:08.000000Z"
+                      }
+                  }
+              }
+          }
+        headers: []
+        description: '200'
     responseFields: []
   -
     httpMethods:
@@ -386,7 +348,7 @@ endpoints:
       - PATCH
     uri: 'api/contacts/{id}'
     metadata:
-      title: 'Updates an existing contact.'
+      title: 'Contact Updates an existing.'
       description: ''
       authenticated: true
     headers:
@@ -398,7 +360,7 @@ endpoints:
         name: id
         description: 'The ID of the contact.'
         required: true
-        example: 10
+        example: 3
         type: integer
     queryParameters: []
     bodyParameters:
@@ -406,49 +368,49 @@ endpoints:
         name: first_name
         description: 'Must be at least 2 characters.'
         required: true
-        example: 'on'
+        example: gd
         type: string
       last_name:
         name: last_name
         description: 'Must be at least 2 characters.'
         required: true
-        example: ''
+        example: e
         type: string
       job_title:
         name: job_title
         description: 'Must be at least 2 characters.'
         required: false
-        example: k
+        example: ''
         type: string
       account_id:
         name: account_id
         description: ''
         required: true
-        example: 17
+        example: 19
         type: integer
       postal_code:
         name: postal_code
         description: 'Must be at least 2 characters.'
         required: false
-        example: ''
+        example: ki
         type: string
       city:
         name: city
         description: 'Must be at least 2 characters.'
         required: false
-        example: nq
+        example: cp
         type: string
       address:
         name: address
         description: 'Must be at least 2 characters.'
         required: false
-        example: k
+        example: i
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: qvonrueden@example.net
+        example: kshlerin.gustave@example.net
         type: string
       country_code:
         name: country_code
@@ -456,14 +418,42 @@ endpoints:
         required: false
         example: null
         type: string
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 200,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "contact": {
+                      "id": 1,
+                      "account_id": 1,
+                      "first_name": "Juvenal",
+                      "last_name": "Yost",
+                      "job_title": "Transformer Repairer",
+                      "address": "2615 Kaley Lodge\nEast Alfonsotown, CT 70458-6001",
+                      "city": "Haagport",
+                      "postal_code": "14234",
+                      "country_code": "FO",
+                      "email": "newton43@keeling.com",
+                      "phone": "+1-541-245-6893",
+                      "created_at": "2021-11-22T20:42:42.000000Z",
+                      "updated_at": "2021-11-22T20:42:42.000000Z"
+                  }
+              }
+          }
+        headers: []
+        description: '200'
     responseFields: []
   -
     httpMethods:
       - DELETE
     uri: 'api/contacts/{id}'
     metadata:
-      title: 'Deletes an existing contact.'
+      title: 'Contact Deletes an existing.'
       description: ''
       authenticated: true
     headers:
@@ -475,18 +465,32 @@ endpoints:
         name: id
         description: 'The ID of the contact.'
         required: true
-        example: 10
+        example: 3
         type: integer
     queryParameters: []
     bodyParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 200,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "value": "Contact successfully deleted"
+              }
+          }
+        headers: []
+        description: '200'
     responseFields: []
   -
     httpMethods:
       - GET
     uri: api/notes
     metadata:
-      title: 'Returns all notes.'
+      title: 'Notes returns all .'
       description: ''
       authenticated: true
     headers:
@@ -498,13 +502,110 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 200,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "notes": {
+                      "current_page": 1,
+                      "data": [],
+                      "first_page_url": "http:\/\/example.test\/api\/notes?page=1",
+                      "from": null,
+                      "last_page": 1,
+                      "last_page_url": "http:\/\/example.test\/api\/notes?page=1",
+                      "links": [
+                          {
+                              "url": null,
+                              "label": "\u0026laquo; Previous",
+                              "active": false
+                          },
+                          {
+                              "url": "http:\/\/example.test\/api\/notes?page=1",
+                              "label": "1",
+                              "active": true
+                          },
+                          {
+                              "url": null,
+                              "label": "Next \u0026raquo;",
+                              "active": false
+                          }
+                      ],
+                      "next_page_url": null,
+                      "path": "http:\/\/example.test\/api\/notes",
+                      "per_page": 10,
+                      "prev_page_url": null,
+                      "to": null,
+                      "total": 0
+                  }
+              }
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/contacts
+    metadata:
+      title: 'Contacts Returns all.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 200,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "contacts": {
+                      "current_page": 1,
+                      "data": [],
+                      "first_page_url": "http:\/\/example.test\/api\/contacts?page=1",
+                      "from": null,
+                      "last_page": 1,
+                      "last_page_url": "http:\/\/example.test\/api\/contacts?page=1",
+                      "links": [
+                          {
+                              "url": null,
+                              "label": "\u0026laquo; Previous",
+                              "active": false
+                          },
+                          {
+                              "url": "http:\/\/example.test\/api\/contacts?page=1",
+                              "label": "1",
+                              "active": true
+                          },
+                          {
+                              "url": null,
+                              "label": "Next \u0026raquo;",
+                              "active": false
+                          }
+                      ],
+                      "next_page_url": null,
+                      "path": "http:\/\/example.test\/api\/contacts",
+                      "per_page": 10,
+                      "prev_page_url": null,
+                      "to": null,
+                      "total": 0
+                  }
+              }
+          }
+        headers: []
+        description: '200'
     responseFields: []
   -
     httpMethods:
@@ -569,70 +670,10 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - GET
-    uri: api/contacts
-    metadata:
-      title: 'Returns all contacts.'
-      description: ''
-      authenticated: true
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/notes
-    metadata:
-      title: 'Creates a new note.'
-      description: ''
-      authenticated: true
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      body:
-        name: body
-        description: 'Must be at least 2 characters.'
-        required: true
-        example: ''
-        type: string
-      noteable_type:
-        name: noteable_type
-        description: ''
-        required: true
-        example: consequuntur
-        type: string
-      noteable_id:
-        name: noteable_id
-        description: ''
-        required: true
-        example: 15
-        type: integer
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - POST
     uri: api/login
     metadata:
-      title: ''
+      title: 'Login - Generates a jwt token'
       description: ''
       authenticated: false
     headers:
@@ -645,13 +686,13 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: sbartoletti@example.net
+        example: qmoen@example.com
         type: string
       password:
         name: password
         description: ''
         required: true
-        example: aut
+        example: repellendus
         type: string
     responses:
       -
@@ -669,38 +710,162 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/login
+    uri: api/contacts
     metadata:
-      title: ''
+      title: 'Contacts Stores newly created.'
       description: ''
-      authenticated: false
+      authenticated: true
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
     queryParameters: []
     bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must be at least 2 characters.'
+        required: true
+        example: 'n'
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must be at least 2 characters.'
+        required: true
+        example: ny
+        type: string
+      job_title:
+        name: job_title
+        description: 'Must be at least 2 characters.'
+        required: false
+        example: af
+        type: string
+      account_id:
+        name: account_id
+        description: ''
+        required: true
+        example: 10
+        type: integer
+      postal_code:
+        name: postal_code
+        description: 'Must be at least 2 characters.'
+        required: false
+        example: wm
+        type: string
+      city:
+        name: city
+        description: 'Must be at least 2 characters.'
+        required: false
+        example: t
+        type: string
+      address:
+        name: address
+        description: 'Must be at least 2 characters.'
+        required: false
+        example: ''
+        type: string
       email:
         name: email
         description: 'Must be a valid email address.'
-        required: true
-        example: joesph.pouros@example.org
+        required: false
+        example: xgreenfelder@example.org
         type: string
-      password:
-        name: password
+      country_code:
+        name: country_code
         description: ''
-        required: true
-        example: dolore
+        required: false
+        example: null
         type: string
     responses:
       -
         status: 200
-        content: |-
+        content: |
           {
-          "data": {
-           "access_token": "eyJ0eXA...",
-           "token_type": "Bearer",
-            "expires_at": "2022-..."
+              "success": true,
+              "code": 201,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "contact": {
+                      "id": 1,
+                      "first_name": "Adelia",
+                      "last_name": "Legros",
+                      "account_id": 1,
+                      "postal_code": "43201-4839",
+                      "city": "Kiehnfurt",
+                      "address": "4288 Amalia Pine Suite 107\nAndreannemouth, KS 14490-1489",
+                      "email": "pfeffer.angus@cassin.com",
+                      "country_code": "VI",
+                      "updated_at": "2021-11-22T20:40:56.000000Z",
+                      "created_at": "2021-11-22T20:40:56.000000Z"
+                  }
+              }
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/notes
+    metadata:
+      title: 'Note creates a new .'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      body:
+        name: body
+        description: 'Must be at least 2 characters.'
+        required: true
+        example: da
+        type: string
+      noteable_type:
+        name: noteable_type
+        description: ''
+        required: true
+        example: reprehenderit
+        type: string
+      noteable_id:
+        name: noteable_id
+        description: ''
+        required: true
+        example: 7
+        type: integer
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "code": 201,
+              "locale": "en",
+              "message": "OK",
+              "data": {
+                  "note": {
+                      "body": "Then they both bowed low, and their curls got entangled together. Alice was beginning to grow up any more HERE.\u0027 \u0027But then,\u0027 thought Alice, \u0027or perhaps they won\u0027t walk the way I ought to have him.",
+                      "noteable_id": 1,
+                      "noteable_type": "account",
+                      "noteable": {
+                          "id": 1,
+                          "name": "O\u0027Connell-Hansen",
+                          "user_id": "1",
+                          "description": "Omnis sit voluptas placeat officiis mollitia tenetur voluptatibus accusantium. Quia non vero magnam impedit eos commodi voluptatem. Et esse nihil ut dolore error fugit perspiciatis.",
+                          "address": "888 Reinger Turnpike Suite 784\nDevonbury, NV 75167",
+                          "city": "East Domingo",
+                          "postal_code": "67072",
+                          "country_code": "AU",
+                          "is_active": "1",
+                          "created_at": "2021-11-22T20:44:53.000000Z",
+                          "updated_at": "2021-11-22T20:44:53.000000Z"
+                      }
+                  }
+              }
           }
         headers: []
         description: '200'

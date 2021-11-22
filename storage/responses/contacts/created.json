@@ -1,0 +1,21 @@
+{
+    "success": true,
+    "code": 201,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "contact": {
+            "id": 1,
+            "first_name": "Adelia",
+            "last_name": "Legros",
+            "account_id": 1,
+            "postal_code": "43201-4839",
+            "city": "Kiehnfurt",
+            "address": "4288 Amalia Pine Suite 107\nAndreannemouth, KS 14490-1489",
+            "email": "pfeffer.angus@cassin.com",
+            "country_code": "VI",
+            "updated_at": "2021-11-22T20:40:56.000000Z",
+            "created_at": "2021-11-22T20:40:56.000000Z"
+        }
+    }
+}

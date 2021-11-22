@@ -1,0 +1,23 @@
+{
+    "success": true,
+    "code": 200,
+    "locale": "en",
+    "message": "OK",
+    "data": {
+        "contact": {
+            "id": 1,
+            "account_id": 1,
+            "first_name": "Juvenal",
+            "last_name": "Yost",
+            "job_title": "Transformer Repairer",
+            "address": "2615 Kaley Lodge\nEast Alfonsotown, CT 70458-6001",
+            "city": "Haagport",
+            "postal_code": "14234",
+            "country_code": "FO",
+            "email": "newton43@keeling.com",
+            "phone": "+1-541-245-6893",
+            "created_at": "2021-11-22T20:42:42.000000Z",
+            "updated_at": "2021-11-22T20:42:42.000000Z"
+        }
+    }
+}

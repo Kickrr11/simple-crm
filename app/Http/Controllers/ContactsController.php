@@ -38,8 +38,9 @@ class ContactsController extends Controller
     public function __construct(private CrudInterface $crudService){}
 
     /**
-     * Returns all contacts.
+     * Contacts Returns all.
      * @return Response
+     * @responseFile storage/responses/contacts/get.json
      * @throws Throwable
      */
 
@@ -53,10 +54,11 @@ class ContactsController extends Controller
     }
 
     /**
-     * Stores newly created contact.
+     * Contacts Stores newly created.
      * @param StoreContactRequest $storeContactRequest
      * @return Response
      * @throws Exception|Throwable
+     * @responseFile storage/responses/contacts/created.json
      */
     public function store(StoreContactRequest $storeContactRequest): Response
     {
@@ -73,11 +75,12 @@ class ContactsController extends Controller
 
 
     /**
-     * Shows single contact.
+     * Contact Shows single .
      *
      * @param int $id
      * @return Response
      * @throws Exception
+     * @responseFile storage/responses/contacts/show_single.json
      */
     public function show(int $id): Response
     {
@@ -89,7 +92,7 @@ class ContactsController extends Controller
     }
 
     /**
-     * Updates an existing contact.
+     * Contact Updates an existing.
      * @param StoreContactRequest $storeContactRequest
      * @param $id
      * @return Response
@@ -100,6 +103,7 @@ class ContactsController extends Controller
      * @throws InvalidTypeException
      * @throws MissingConfigurationKeyException
      * @throws NotIntegerException
+     * @responseFile storage/responses/contacts/updated.json
      */
 
     public function update(StoreContactRequest $storeContactRequest, $id): Response
@@ -116,10 +120,11 @@ class ContactsController extends Controller
     }
 
     /**
-     * Deletes an existing contact.
+     *  Contact Deletes an existing.
      * @param $id
      * @return Response
      * @throws Exception|Throwable
+     * @responseFile storage/responses/contacts/deleted.json
      */
 
     public function destroy($id): Response
