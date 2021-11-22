@@ -63,7 +63,7 @@ For Testing, run `./vendor/bin/phpunit`  command.
         }
     }
     </code>
-  - The value of access_token must be included when making requests to each of the endpoints below example:
+  - The following headers must be included on each request:
     
     `
     Content-type: multipart/form-data
