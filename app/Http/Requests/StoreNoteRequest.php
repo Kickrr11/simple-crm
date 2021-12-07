@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Rules\NotesMorphRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Arr;
+use JetBrains\PhpStorm\ArrayShape;
 
 class StoreNoteRequest extends FormRequest
 {
@@ -23,7 +24,8 @@ class StoreNoteRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    #[ArrayShape(["body" => "string", 'noteable_type' => "string", 'noteable_id' => "string", "noteable_type" => "\App\Rules\NotesMorphRule"])]
+    public function rules(): array
     {
         $rules = [
             "body" => "required|min:2",
@@ -31,10 +33,9 @@ class StoreNoteRequest extends FormRequest
             'noteable_id' => 'required|integer',
         ];
         $request = request()->all();
-        $noteableType = Arr::get($request, "noteable_type");
-        $noteableId = Arr::get($request, "noteable_id");
-        if ($noteableType AND $noteableId) {
-            $rules["noteable_type"] = new NotesMorphRule($noteableType, $noteableId);
+
+        if (Arr::get($request, "noteable_type") && Arr::get($request, "noteable_id")) {
+            $rules["noteable_type"] = new NotesMorphRule(Arr::get($request, "noteable_id"));
         }
         return $rules;
     }

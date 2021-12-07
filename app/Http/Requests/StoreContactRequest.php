@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use JetBrains\PhpStorm\ArrayShape;
 
 class StoreContactRequest extends FormRequest
 {
@@ -21,6 +22,7 @@ class StoreContactRequest extends FormRequest
      *
      * @return array
      */
+    #[ArrayShape(["first_name" => "string", "last_name" => "string", "job_title" => "string", "account_id" => "string", "postal_code" => "string", "city" => "string", "address" => "string", "email" => "string", "country_code" => "string"])]
     public function rules(): array
     {
         return [
@@ -32,7 +34,6 @@ class StoreContactRequest extends FormRequest
             "city" => "sometimes|min:2",
             "address" => "sometimes|min:2",
             "email" => "sometimes|email",
-            //"phone" => "sometimes|required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10",
             "country_code" => "sometimes:exists:countries.code",
         ];
     }

@@ -5,16 +5,19 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use JetBrains\PhpStorm\ArrayShape;
 use Tests\Helpers\PassportUser;
 use Tests\TestCase;
 
 class UserTest extends TestCase
 {
     use RefreshDatabase;
+
     /**
      * Test - user can receive token.
      *
      * @return void
+     * @throws \Throwable
      */
     public function test_user_can_receive_token(): void
     {
@@ -33,7 +36,8 @@ class UserTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function loginResponseSubset()
+    #[ArrayShape(["data" => "string[]"])]
+    public function loginResponseSubset(): array
     {
         return [
             "data" => [
