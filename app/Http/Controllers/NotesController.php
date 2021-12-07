@@ -50,6 +50,24 @@ class NotesController extends Controller
     }
 
     /**
+     * Note Shows single .
+     *
+     * @param int $id
+     * @return Response
+     * @throws Exception
+     * @responseFile storage/responses/notes/show_single.json
+     */
+
+    public function show(int $id): Response
+    {
+        try {
+            return ResponseBuilder::success(["notes" => $this->crudService->show($id)], 200);
+        } catch (Throwable $throwable) {
+            return ResponseBuilder::error($throwable->getCode(), ["notes" => $throwable->getMessage()], $throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
      * Note creates a new .
      * @param StoreNoteRequest $storeNoteRequest
      * @return Response

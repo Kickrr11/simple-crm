@@ -10,10 +10,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Collection;
 use JetBrains\PhpStorm\ArrayShape;
 use Tests\Helpers\PassportUser;
 use Tests\TestCase;
 use Arr;
+use Throwable;
 
 
 /**
@@ -41,12 +43,12 @@ class NoteTest extends TestCase
      * Test - note for an account can be created.
      *
      * @return void
-     * @throws \Throwable
+     * @throws Throwable
      */
 
     public function test_note_to_account_can_be_created(): void
     {
-        $theNotesData = $this->note_creating_data(new Account());
+        $theNotesData = $this->note_creating_data(new Account(), "raw");
         $response = $this->json("POST", env("APP_URL") . '/api/notes', $theNotesData);
         $subset = $this->prepare_subset_data("account");
         $response->decodeResponseJson()->assertSubset($subset, false);
@@ -54,15 +56,29 @@ class NoteTest extends TestCase
     }
 
     /**
+     * Test - single note can be viewed.
+     *
+     * @return void
+     */
+    public function test_note_can_be_viewed(): void
+    {
+        $user = new PassportUser();
+        $user();
+        $theNote = $this->note_creating_data(new Account(), "create");
+        $response = $this->json("GET", env("APP_URL") . "/api/notes/". Arr::get($theNote, "id"));
+        $response->assertStatus(200);
+    }
+
+    /**
      * Test - note for an contact can be created.
      *
      * @return void
-     * @throws \Throwable
+     * @throws Throwable
      */
 
     public function test_note_to_contact_can_be_created(): void
     {
-        $theNotesData = $this->note_creating_data(new Contact());
+        $theNotesData = $this->note_creating_data(new Contact(), "raw");
         $response = $this->json("POST", env("APP_URL") . '/api/notes', $theNotesData);
         $subset = $this->prepare_subset_data("contact");
         $response->decodeResponseJson()->assertSubset($subset, false);
@@ -72,16 +88,20 @@ class NoteTest extends TestCase
     /**
      * Prepare notes create data
      * @param Model $model
+     * @param $method
      * @return array
      */
 
-    public function note_creating_data(Model $model): array
+    public function note_creating_data(Model $model, $method): array
     {
         $notesData = Note::factory()->count(1)->for(
             $model::factory(), 'noteable'
-        )->raw();
+        )->{$method}();
         $user = new PassportUser();
         $user();
+        if ($notesData instanceof Collection) {
+            $notesData = $notesData->toArray();
+        }
         return Arr::get($notesData, 0);
     }
 
@@ -93,7 +113,7 @@ class NoteTest extends TestCase
 
     public function test_note_created_custom_validation(): void
     {
-        $theNotesData = $this->note_creating_data(new User());
+        $theNotesData = $this->note_creating_data(new User(), "raw");
         $response = $this->json("POST", env("APP_URL") . '/api/notes', $theNotesData);
         $response->assertStatus(422);
     }
