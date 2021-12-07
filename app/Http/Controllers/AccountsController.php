@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Services\Accounts\Contracts\CrudInterface;
 use Exception;
 use MarcinOrlowski\ResponseBuilder\Exceptions\ArrayWithMixedKeysException;

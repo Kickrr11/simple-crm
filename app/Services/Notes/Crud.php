@@ -3,6 +3,7 @@
 
 namespace App\Services\Notes;
 
+use App\Models\Account;
 use App\Models\Note;
 use App\Services\Notes\Contracts\CrudInterface;
 use Exception;
@@ -30,7 +31,7 @@ class Crud implements CrudInterface
 
     public function show(int $id): Model
     {
-        // TODO: Implement show() method.
+        return Note::with("noteable")->findOrFail($id);
     }
 
     /**

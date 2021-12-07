@@ -55,15 +55,11 @@ class Crud implements CrudInterface
 
     public function storeOrUpdate(array $data, $id = null): Model
     {
-        try {
-            $account = $id ? Account::findOrFail($id) : new Account();
-            $account->fill($data);
-            $account->user()->associate($data["user_id"]);
-            $account->save();
-            return $account;
-        } catch (\Throwable $throwable) {
-            throw new \Exception($throwable->getMessage());
-        }
+        $account = $id ? Account::findOrFail($id) : new Account();
+        $account->fill($data);
+        $account->user()->associate($data["user_id"]);
+        $account->save();
+        return $account;
     }
 
     /**
